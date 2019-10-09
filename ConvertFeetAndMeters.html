@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<script>
+    let choose = parseInt(prompt("Nhập vào số 0 (để chuyển đổi feet sang meters) hoặc 1 (để chuyển đổi meters sang feet)"));
+    if(choose == 0){
+        let feet = parseFloat(prompt("Nhập vào số feet: "));
+        meters(feet);
+    }else if(choose == 1){
+        let meters = parseFloat(prompt("Nhập vào số Meters: "));
+        feet(meters);
+    }else {
+        alert("Nhập lại lựa chọn");
+    }
+    function meters(feet) {
+        meters = 0.305 * feet;
+        alert("Số chuyển đổi từ feet " + feet + " sang meter " + meters);
+    }
+    function feet(meters) {
+        feet = 3.279 * meters;
+        alert("Số chuyển đổi từ meter " + meters + " sang feet " + feet);
+    }
+</script>
+</body>
+</html>
